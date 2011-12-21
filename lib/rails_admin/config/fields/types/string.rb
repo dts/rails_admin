@@ -13,7 +13,8 @@ module RailsAdmin
           register_instance_option(:html_attributes) do
             {
               :maxlength => length,
-              :size => [50, length.to_i].min
+              :size => [50, length.to_i].min,
+              :value => value
             }
            end
 

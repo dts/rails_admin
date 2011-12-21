@@ -129,7 +129,14 @@ module RailsAdmin
         end
 
         register_instance_option(:html_attributes) do
-          {}
+# <<<<<<< HEAD
+#          {}
+# =======
+          {
+            :class => css_class,
+            :value => value
+          }.merge(column_width.present? ? { :style => "width:#{column_width}px" } : {})
+# >>>>>>> parent of 78494f5... value in the html hash is not needed at all. artifact from the past.
         end
 
         # Accessor for field's label.
